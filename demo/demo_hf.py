@@ -30,6 +30,8 @@ def inference(image_path, prompt, model, processor):
         add_generation_prompt=True
     )
     image_inputs, video_inputs = process_vision_info(messages)
+    print(image_inputs)
+    print(video_inputs)
     inputs = processor(
         text=[text],
         images=image_inputs,
